@@ -1,6 +1,8 @@
 import requests
 import time
 import datetime
+from flask import Flask
+import threading
 
 # === CONFIGURATION ===
 TMDB_API_KEY = "41ee980e4b5f05f6693fda00eb7c4fd4"  # TMDb API Key
@@ -102,5 +104,16 @@ def main():
         # Wait 30 minutes before next movie batch
         time.sleep(1800)
 
+# === FLASK SERVER FOR RENDER / REPLIT ===
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Telegram Movie Bot is running!"
+
+def run_flask():
+    app.run(host="0.0.0.0", port=10000)
+
 if __name__ == "__main__":
+    threading.Thread(target=run_flask).start()
     main()
