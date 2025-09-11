@@ -7,7 +7,7 @@ import threading
 # === CONFIGURATION ===
 TMDB_API_KEY = "41ee980e4b5f05f6693fda00eb7c4fd4"  # TMDb API Key
 TELEGRAM_BOT_TOKEN = "8404826072:AAEySJWRKnLErIPSHTFy0hxQhosxh7p5Tvo"  # From BotFather
-TELEGRAM_CHANNEL = "@republic_gamerz"  # Telegram channel username
+TELEGRAM_CHANNEL = "@movix_movies"  # Telegram channel username
 MOVIX_URL = "https://movix.rf.gd"
 AFFILIATE_LINK = "https://t.me/luciddreams?start=_tgr_ypKC6RNkZmNl"
 
