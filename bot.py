@@ -1,3 +1,4 @@
+import os
 import requests
 import time
 import datetime
@@ -5,11 +6,11 @@ from flask import Flask
 import threading
 
 # === CONFIGURATION ===
-TMDB_API_KEY = "41ee980e4b5f05f6693fda00eb7c4fd4"  # TMDb API Key
-TELEGRAM_BOT_TOKEN = "8404826072:AAEySJWRKnLErIPSHTFy0hxQhosxh7p5Tvo"  # From BotFather
-TELEGRAM_CHANNEL = "@movix_movies"  # Telegram channel username
-MOVIX_URL = "https://movix.rf.gd"
-AFFILIATE_LINK = "https://t.me/luciddreams?start=_tgr_ypKC6RNkZmNl"
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHANNEL = os.getenv("TELEGRAM_CHANNEL")
+MOVIX_URL = os.getenv("MOVIX_URL")
+AFFILIATE_LINK = os.getenv("AFFILIATE_LINK")
 
 # TMDb API endpoint for trending movies
 TMDB_URL = f"https://api.themoviedb.org/3/trending/movie/day?api_key={TMDB_API_KEY}"
